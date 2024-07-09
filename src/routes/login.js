@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+const PrismaClient =  require("@prisma/client");
 const bcrypt = require('bcryptjs');
-import { Express, Request, Response } from "express";
 const jwt = require('jsonwebtoken');
 const privateKey = require('../auth/private_key')
 
