@@ -3,10 +3,10 @@ const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 // const handle404 = require('./src/middlewares/handle404');
+import setupRoutes from './src/routes/router';
 
 const app = express();
 const port = process.env.PORT || 3000;
-import setupRoutes from './src/routes/router';
 
 app
     .use(favicon(__dirname + '/favicon.ico'))

@@ -9,6 +9,7 @@
     "seedPok": "ts-node src/DB/seedPokemon.ts",
     "seedUser": "ts-node src/DB/seedUser.ts"
   },
+  "type": "module",
   "author": "Antoine",
   "license": "ISC",
   "dependencies": {
