@@ -1,5 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-import { Express, Request, Response } from "express";
+const PrismaClient =  require("@prisma/client");
 const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();

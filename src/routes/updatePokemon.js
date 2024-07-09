@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
-import { Express, Request, Response } from "express";
-import { validPokemonUpdate } from "../services/pokemonService";
+const PrismaClient = require("@prisma/client");
+const validPokemonUpdate = require("../services/pokemonService");
 const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();

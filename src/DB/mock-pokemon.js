@@ -1,14 +1,6 @@
-interface Pokemon {
-    id: number,
-    name: string,
-    hp: number,
-    cp: number,
-    picture: string,
-    types:string[],
-    created: Date,
-}
 
-const pokemons: Pokemon[] = [
+
+const pokemons = [
     {
         id: 1,
         name: "Bulbizarre",

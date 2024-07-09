@@ -1,6 +1,5 @@
-import { Express, Request, Response } from 'express';
-import { PrismaClient, Prisma } from '@prisma/client';
-import { validPokemonCreate } from '../services/pokemonService';
+const PrismaClient =  require("@prisma/client");
+const validPokemonCreate = require('../services/pokemonService');
 const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();

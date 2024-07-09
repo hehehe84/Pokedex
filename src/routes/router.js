@@ -1,11 +1,10 @@
-import { Express } from 'express';
-import findManyPokemon from './findAllPokemons';
-import createPokemon from './createPokemon';
-import deletePokemon from './deletePokemons';
-import findPokemonById from './findPokemonById';
-import updatePokemon from './updatePokemon';
-import login from './login';
-import Register from './register';
+const findManyPokemon = require('./findAllPokemons');
+const createPokemon = require('./createPokemon');
+const deletePokemon = require('./deletePokemons');
+const findPokemonById = require('./findPokemonById');
+const updatePokemon = require('./updatePokemon');
+const login = require('./login');
+const Register = require('./register');
 
 export default (app) => {
     findManyPokemon(app);
