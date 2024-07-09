@@ -1,7 +1,7 @@
 import express from 'express';
-const favicon = require('serve-favicon');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import favicon from 'serve-favicon';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 const seedDbPok = require('./DB/seedPokemon');
 const seedDbUser = require('./DB/seedUser');
 // const handle404 = require('./src/middlewares/handle404');
