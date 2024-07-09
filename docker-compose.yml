@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  postgres:
+    image: postgres:latest
+    container_name: MyPokDock
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:5432
