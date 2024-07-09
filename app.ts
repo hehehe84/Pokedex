@@ -5,7 +5,7 @@ const cors = require('cors')
 // const handle404 = require('./src/middlewares/handle404');
 
 const app = express();
-const port: number = Number(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
 import setupRoutes from './src/routes/router';
 
 app
