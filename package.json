@@ -4,7 +4,7 @@
   "description": "Quick API rest to handle pokemon to clients.",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=production node dist/main.cjs",
+    "start": "NODE_ENV=production node src/main.js",
     "dev": "NODE_ENV=development nodemon app.ts",
     "seedPok": "ts-node src/DB/seedPokemon.ts",
     "seedUser": "ts-node src/DB/seedUser.ts"
