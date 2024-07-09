@@ -21,6 +21,7 @@ const seedDbPok = async () => {
         console.log('Pokemon Database successfully seeded!');
     } catch (error) {
         console.error('Error seeding database:', error);
+        throw error;
     } finally {
         await prisma.$disconnect();
     }

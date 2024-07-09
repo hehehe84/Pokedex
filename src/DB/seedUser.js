@@ -17,6 +17,7 @@ const seedDbUser = async () => {
         console.log('User Database seeded!');
     } catch (error) {
         console.error('Error seeding database:', error);
+        throw error;
     } finally {
         await prisma.$disconnect();
     }
