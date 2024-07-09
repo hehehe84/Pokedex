@@ -1,9 +1,10 @@
-const express = require('express');
-const favicon = require('serve-favicon');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import express from 'express';
+import favicon from 'serve-favicon';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 // const handle404 = require('./src/middlewares/handle404');
-const setupRoutes = require('./routes/router').default;
+import setupRoutes from './routes/router';
+
 const app = express();
 const port = process.env.PORT || 3000;
 app
