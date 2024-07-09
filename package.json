@@ -2,10 +2,10 @@
   "name": "node-pokemon-api",
   "version": "1.0.0",
   "description": "Quick API rest to handle pokemon to clients.",
-  "main": "app.ts",
+  "main": "app.js",
   "scripts": {
     "build": "tsc",
-    "start": "NODE_ENV=production node app.ts",
+    "start": "NODE_ENV=production node app.js",
     "dev": "NODE_ENV=development nodemon app.ts",
     "seedPok": "ts-node src/DB/seedPokemon.ts",
     "seedUser": "ts-node src/DB/seedUser.ts"
