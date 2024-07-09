@@ -4,8 +4,9 @@
   "description": "Quick API rest to handle pokemon to clients.",
   "main": "app.ts",
   "scripts": {
+    "build": "tsc",
     "start": "NODE_ENV=production node app.ts",
-    "dev" : "NODE_ENV=development nodemon app.ts",
+    "dev": "NODE_ENV=development nodemon app.ts",
     "seedPok": "ts-node src/DB/seedPokemon.ts",
     "seedUser": "ts-node src/DB/seedUser.ts"
   },
@@ -28,6 +29,7 @@
     "@types/express": "^4.17.21",
     "nodemon": "^3.1.4",
     "prisma": "^5.16.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
