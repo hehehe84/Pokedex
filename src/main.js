@@ -1,11 +1,11 @@
-import express from 'express';
-import favicon from 'serve-favicon';
-import bodyParser from 'body-parser';
-import cors from 'cors';
+const express = require('express');
+const favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const seedDbPok = require('./DB/seedPokemon');
 const seedDbUser = require('./DB/seedUser');
 // const handle404 = require('./src/middlewares/handle404');
-const setupRoutes = require('./routes/router').default;
+const setupRoutes = require('./routes/router');
 
 const app = express();
 const port = process.env.PORT || 3000;

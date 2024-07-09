@@ -23,4 +23,4 @@ const seedDbUser = async () => {
     }
 };
 
-module.exports = seedDbPok;
+module.exports = seedDbUser;

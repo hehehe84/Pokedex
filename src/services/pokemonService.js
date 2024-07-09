@@ -56,4 +56,4 @@ async function validPokemonUpdate(id, data) {
     });
 }
 
-export {validPokemonCreate, validPokemonUpdate}
+module.exports = {validPokemonCreate, validPokemonUpdate}
