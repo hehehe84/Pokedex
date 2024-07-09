@@ -15,13 +15,7 @@ const pokemonSchema = z.object({
     })).min(1, 'A pokemon must have at least one type.').max(3, 'A pokemon can have maximum 3 types.'),
 });
 
-async function validPokemonCreate(data: {
-    name: string,
-    hp: number,
-    cp: number,
-    picture: string,
-    types: string[],
-}) {
+async function validPokemonCreate(data) {
     const validationResult = pokemonSchema.safeParse(data);
     
     if (!validationResult.success) {
@@ -41,13 +35,7 @@ async function validPokemonCreate(data: {
     });
 }
 
-async function validPokemonUpdate(id: number, data: {
-    name: string,
-    hp: number,
-    cp: number,
-    picture: string,
-    types: string[],
-}) {
+async function validPokemonUpdate(id, data) {
     const validationResult = pokemonSchema.safeParse(data);
     
     if (!validationResult.success) {

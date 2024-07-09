@@ -4,7 +4,7 @@ import { Express } from "express";
 
 const prisma = new PrismaClient();
 
-const Register = (app: Express): void => {
+const Register = (app) => {
     app.post('/api/register', async (req, res) => {
         try {
             const hashedPassword = await bcrypt.hash(req.body.password, 10);

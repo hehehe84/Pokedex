@@ -5,8 +5,8 @@ const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();
 
-const updatePokemon = (app: Express): void => {
-    app.put('/api/pokemons/:id', auth, async(req: Request, res: Response) => {
+const updatePokemon = (app) => {
+    app.put('/api/pokemons/:id', auth, async(req, res) => {
         const id = parseInt(req.params.id);
         try {
             const validatedData = await validPokemonUpdate(id, {
@@ -34,7 +34,7 @@ const updatePokemon = (app: Express): void => {
             const message = `The pokemon ${pokemon.name} was correctly updated to ${updatePokemon.name}`;
             res.json({message, data: pokemon});
 
-        } catch (error: any) {
+        } catch (error) {
             if (error.code == "P2002"){
                 const message = 'Unique constraint violation';
                 return res.status(400).json({ message, data: error });

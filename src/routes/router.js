@@ -7,7 +7,7 @@ import updatePokemon from './updatePokemon';
 import login from './login';
 import Register from './register';
 
-export default (app: Express): void => {
+export default (app) => {
     findManyPokemon(app);
     createPokemon(app);
     deletePokemon(app);

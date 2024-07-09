@@ -22,6 +22,6 @@ const seedDb = async () => {
     }
 };
 
-seedDb().catch((error: Error) => {
+seedDb().catch((error) => {
     console.error('Error seeding database:', error);
 });

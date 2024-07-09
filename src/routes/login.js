@@ -6,8 +6,8 @@ const privateKey = require('../auth/private_key')
 
 const prisma = new PrismaClient();
 
-const login = (app: Express): void => {
-    app.post('/api/login', async (req: Request, res: Response) => {
+const login = (app) => {
+    app.post('/api/login', async (req, res) => {
         try {
             const user = await prisma.user.findUnique({
                 where: { username: req.body.username }, // Find user by username

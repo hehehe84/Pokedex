@@ -4,8 +4,8 @@ const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();
 
-const findPokemonById = (app: Express): void => {
-    app.get('/api/pokemons/:id', auth, async (req: Request, res: Response) => {  
+const findPokemonById = (app) => {
+    app.get('/api/pokemons/:id', auth, async (req, res) => {  
         const id = parseInt(req.params.id);
         try {
             const pokemon = await prisma.pokemon.findUnique({

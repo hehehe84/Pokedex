@@ -2,7 +2,7 @@ const jwt= require('jsonwebtoken');
 const privateKey = require('./private_key');
 import { Express, Request, Response, NextFunction } from "express";
 
-module.exports = (req: Request, res: Response, next: NextFunction) => {
+module.exports = (req, res, next) => {
     const authorizationHeader = req.headers.authorization;
     
     if(!authorizationHeader) {

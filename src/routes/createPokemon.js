@@ -5,8 +5,8 @@ const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();
 
-const createPokemon = (app: Express): void => {
-    app.post('/api/pokemons', auth, async (req: Request, res: Response) => {  
+const createPokemon = (app) => {
+    app.post('/api/pokemons', auth, async (req, res) => {  
         try {
 
             const validatedData = await validPokemonCreate({

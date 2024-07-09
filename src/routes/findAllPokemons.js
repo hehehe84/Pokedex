@@ -4,12 +4,12 @@ const auth = require('../auth/auth');
 
 const prisma = new PrismaClient();
 
-const findManyPokemon = (app: Express): void => {
-    app.get('/api/pokemons', auth, async (req: Request, res: Response) => {
+const findManyPokemon = (app) => {
+    app.get('/api/pokemons', auth, async (req, res) => {
         try {
             let pokemons;
-            const nameQuery = req.query.name as string | undefined;
-            const limitQuery = req.query.limit as string | undefined;
+            const nameQuery = req.query.name;
+            const limitQuery = req.query.limit;
 
             if(nameQuery && nameQuery.length < 2){
                 const message ='The research should have at least 2 characters.';

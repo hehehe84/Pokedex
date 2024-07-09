@@ -1,13 +1,11 @@
 import { PrismaClient } from '@prisma/client';
 import pokemons from './mock-pokemon';
-const bcrypt = require('bcrypt')
 
 const prisma = new PrismaClient();
 
 const seedDb = async () => {
     try {
         await prisma.pokemon.deleteMany(); // Clear existing data
-        // await prisma.$executeRaw`TRUNCATE TABLE "Pokemon" RESTART IDENTITY;`;
         for (const pokemon of pokemons) {
             await prisma.pokemon.create({
                 data: {
@@ -15,12 +13,12 @@ const seedDb = async () => {
                     hp: pokemon.hp,
                     cp: pokemon.cp,
                     picture: pokemon.picture,
-                    types: { set: pokemon.types }, // Use Prisma's set notation for arrays
+                    types: pokemon.types,
                     created_at: pokemon.created
                 }
             });
         }
-        console.log('Database successfully seeded!');
+        console.log('Pokemon Database successfully seeded!');
     } catch (error) {
         console.error('Error seeding database:', error);
     } finally {
@@ -28,4 +26,6 @@ const seedDb = async () => {
     }
 };
 
-export default seedDb;
+seedDb().catch((error) => {
+    console.error('Error seeding database:', error);
+});
