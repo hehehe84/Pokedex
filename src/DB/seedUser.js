@@ -1,9 +1,9 @@
-const PrismaClient =  require("@prisma/client");
+const {PrismaClient} =  require("@prisma/client");
 const bcrypt = require('bcryptjs');
 
 const prisma = new PrismaClient();
 
-const seedDb = async () => {
+const seedDbUser = async () => {
 
     try {
         await prisma.user.deleteMany(); // Clear existing data
@@ -22,6 +22,4 @@ const seedDb = async () => {
     }
 };
 
-seedDb().catch((error) => {
-    console.error('Error seeding database:', error);
-});
+module.exports = seedDbPok;

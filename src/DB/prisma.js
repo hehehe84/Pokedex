@@ -1,4 +1,4 @@
-const PrismaClient =  require("@prisma/client");
+const {PrismaClient} =  require("@prisma/client");
 const pokemons = require('./mock-pokemon');
 
 const prisma = new PrismaClient();

@@ -1,4 +1,4 @@
-const PrismaClient =  require("@prisma/client");
+const { PrismaClient } = require("@prisma/client");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const privateKey = require('../auth/private_key')

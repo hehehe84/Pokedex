@@ -1,4 +1,4 @@
-const PrismaClient =  require("@prisma/client");
+const {PrismaClient} =  require("@prisma/client");
 const validPokemonCreate = require('../services/pokemonService');
 const auth = require('../auth/auth');
 

@@ -1,9 +1,9 @@
-const PrismaClient =  require("@prisma/client");
+const { PrismaClient } = require("@prisma/client");
 const pokemons = require('./mock-pokemon');
 
 const prisma = new PrismaClient();
 
-const seedDb = async () => {
+const seedDbPok = async () => {
     try {
         await prisma.pokemon.deleteMany(); // Clear existing data
         for (const pokemon of pokemons) {
@@ -26,6 +26,5 @@ const seedDb = async () => {
     }
 };
 
-seedDb().catch((error) => {
-    console.error('Error seeding database:', error);
-});
+// Exporting the seedDbPok function
+module.exports = seedDbPok;
