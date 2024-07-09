@@ -48,4 +48,4 @@ const updatePokemon = (app) => {
     })
 }
 
-export default updatePokemon;
+module.exports = updatePokemon;

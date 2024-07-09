@@ -27,4 +27,4 @@ const seedDb = async () => {
     }
 };
 
-export default seedDb;
+module.exports = seedDb;

@@ -6,7 +6,7 @@ const updatePokemon = require('./updatePokemon');
 const login = require('./login');
 const Register = require('./register');
 
-export default (app) => {
+module.exports = (app) => {
     findManyPokemon(app);
     createPokemon(app);
     deletePokemon(app);

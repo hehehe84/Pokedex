@@ -33,4 +33,4 @@ const deletePokemon = (app) => {
     });
 };
 
-export default deletePokemon;
+module.exports = deletePokemon;

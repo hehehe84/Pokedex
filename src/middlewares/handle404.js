@@ -5,4 +5,4 @@ const handle404 = (app) => {
     });
 };
 
-export default handle404;
+module.exports = handle404;

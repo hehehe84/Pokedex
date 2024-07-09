@@ -25,4 +25,4 @@ const findPokemonById = (app) => {
     });
 };
 
-export default findPokemonById;
+module.exports = findPokemonById;

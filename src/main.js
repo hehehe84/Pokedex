@@ -1,7 +1,7 @@
-const express = require('express')
-const favicon = require('serve-favicon')
-const bodyParser = require('body-parser')
-const cors = require('cors')
+import express from 'express';
+const favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const seedDbPok = require('./DB/seedPokemon');
 const seedDbUser = require('./DB/seedUser');
 // const handle404 = require('./src/middlewares/handle404');

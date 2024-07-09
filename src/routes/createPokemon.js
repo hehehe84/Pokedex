@@ -36,4 +36,4 @@ const createPokemon = (app) => {
     });
 };
 
-export default createPokemon;
+module.exports = createPokemon;

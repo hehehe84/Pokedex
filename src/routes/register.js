@@ -21,4 +21,4 @@ const Register = (app) => {
         }
     })
 }
-export default Register;
+module.exports = Register;

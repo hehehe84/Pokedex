@@ -45,4 +45,4 @@ const findManyPokemon = (app) => {
     });
 };
 
-export default findManyPokemon;
+module.exports = findManyPokemon;

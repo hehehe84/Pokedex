@@ -44,4 +44,4 @@ const login = (app) => {
         }
     })
 }
-export default login;
+module.exports = login;
