@@ -3,7 +3,7 @@ const pokemons = require('./mock-pokemon');
 
 const seedDbPok = async () => {
     try {
-        await prisma.pokemon.deleteMany(); // Clear existing data
+        // await prisma.pokemon.deleteMany(); // Clear existing data TO COMMENT WHEN DEPLOYMENT
         for (const pokemon of pokemons) {
             await prisma.pokemon.create({
                 data: {

@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const seedDbUser = async () => {
 
     try {
-        await prisma.user.deleteMany(); // Clear existing data
+        // await prisma.user.deleteMany(); // Clear existing data TO COMMENT WHEN DEPLOYMENT
         const hashedPassword = await bcrypt.hash('Pikachu', 10); 
         await prisma.user.create({
             data: {
