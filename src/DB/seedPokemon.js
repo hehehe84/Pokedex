@@ -1,7 +1,5 @@
-const { PrismaClient } = require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const pokemons = require('./mock-pokemon');
-
-const prisma = new PrismaClient();
 
 const seedDbPok = async () => {
     try {
@@ -26,6 +24,7 @@ const seedDbPok = async () => {
         await prisma.$disconnect();
     }
 };
+seedDbPok();
 
 // Exporting the seedDbPok function
 module.exports = seedDbPok;

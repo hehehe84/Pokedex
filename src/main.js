@@ -27,16 +27,15 @@ if (process.env.NODE_ENV === 'production') {
     }).catch((error) => {
         console.error('Error seeding User database:', error);
     });
+    //Production get
+    
 }
-//Production get
+setupRoutes(app);
 
 app.get('/', (req, res) => {
-    res.json('Hello Heroku Server!');
+    (process.env.NODE_ENV === 'production') ? res.json('Hello Heroku Server! 🏔️'): res.json('Hello, local server!! 🥸');
 })
 
-//Router
-setupRoutes(app);
-// app.use(({res}) => )
 
 //404 middleware
 app.use(({res}) => {

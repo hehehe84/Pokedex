@@ -1,8 +1,6 @@
-const {PrismaClient} = require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const validPokemonUpdate = require("../services/pokemonService");
 const auth = require('../auth/auth');
-
-const prisma = new PrismaClient();
 
 const updatePokemon = (app) => {
     app.put('/api/pokemons/:id', auth, async(req, res) => {

@@ -1,9 +1,7 @@
-const { PrismaClient } = require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const privateKey = require('../auth/private_key')
-
-const prisma = new PrismaClient();
+const privateKey = require('../auth/private_key');
 
 const login = (app) => {
     app.post('/api/login', async (req, res) => {

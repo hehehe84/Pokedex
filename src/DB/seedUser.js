@@ -1,7 +1,5 @@
-const {PrismaClient} =  require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const bcrypt = require('bcryptjs');
-
-const prisma = new PrismaClient();
 
 const seedDbUser = async () => {
 
@@ -22,5 +20,6 @@ const seedDbUser = async () => {
         await prisma.$disconnect();
     }
 };
+seedDbUser();
 
 module.exports = seedDbUser;

@@ -1,7 +1,6 @@
-const {PrismaClient} =  require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const auth = require('../auth/auth');
 
-const prisma = new PrismaClient();
 
 const findPokemonById = (app) => {
     app.get('/api/pokemons/:id', auth, async (req, res) => {  

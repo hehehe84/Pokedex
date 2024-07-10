@@ -1,13 +1,10 @@
-const {PrismaClient} =  require("@prisma/client");
+const {Prisma} =  require("@prisma/client");
 const validPokemonCreate = require('../services/pokemonService');
 const auth = require('../auth/auth');
-
-const prisma = new PrismaClient();
 
 const createPokemon = (app) => {
     app.post('/api/pokemons', auth, async (req, res) => {  
         try {
-
             const validatedData = await validPokemonCreate({
                 name: req.body.name,
                 hp: req.body.hp,
@@ -16,7 +13,7 @@ const createPokemon = (app) => {
                 types: req.body.types,
             });
 
-            const pokemon = await prisma.pokemon.create({
+            const pokemon = await db.pokemon.create({
                 data: validatedData,
             });
             const message = `Le pokémon ${req.body.name} a été obtenu`;

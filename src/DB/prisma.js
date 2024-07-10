@@ -1,7 +1,5 @@
-const { PrismaClient } =  require("@prisma/client");
+const prisma = require('../DB/dbClient');
 const pokemons = require('./mock-pokemon');
-
-const prisma = new PrismaClient();
 
 const seedDb = async () => {
     try {
@@ -14,7 +12,7 @@ const seedDb = async () => {
                     hp: pokemon.hp,
                     cp: pokemon.cp,
                     picture: pokemon.picture,
-                    types: { set: pokemon.types }, // Use Prisma's set notation for arrays
+                    types: { set: pokemon.types }, 
                     created_at: pokemon.created
                 }
             });
